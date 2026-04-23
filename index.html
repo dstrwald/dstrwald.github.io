@@ -2,62 +2,189 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Dein Name | Java & SQL Developer</title>
+  <title>dstrwald | Java & SQL Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 40px;
+      padding: 40px 20px;
     }
-    h1 {
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #38bdf8, #6366f1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      color: #94a3b8;
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-top: 50px;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
       color: #38bdf8;
     }
+
+    /* CARDS */
     .card {
       background: #1e293b;
       padding: 20px;
-      margin-top: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      margin-top: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* TAGS */
+    .tags span {
+      background: #0ea5e9;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+
+    /* LINKS */
     a {
       color: #38bdf8;
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* CODE BLOCK */
+    pre {
+      background: #020617;
+      padding: 15px;
+      border-radius: 8px;
+      color: #38bdf8;
+      overflow-x: auto;
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Dein Name</h1>
-    <p>Java & SQL Developer – Backend, APIs, Datenbanken</p>
 
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero fade-in">
+    <h1 class="hero-title">dstrwald</h1>
+    <p class="hero-subtitle">
+      Java & SQL Developer – Backend, APIs, Datenbanken
+    </p>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section fade-in">
+    <h2>Über mich</h2>
     <div class="card">
-      <h2>Über mich</h2>
       <p>
         Ich entwickle performante Backend-Systeme mit Java und arbeite intensiv mit relationalen Datenbanken.
         Fokus auf sauberen Code, Skalierbarkeit und effiziente SQL-Abfragen.
       </p>
+
+      <div class="tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>SQL</span>
+        <span>PostgreSQL</span>
+        <span>REST APIs</span>
+      </div>
     </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section fade-in">
+    <h2>Projekte</h2>
 
     <div class="card">
-      <h2>Projekte</h2>
-      <ul>
-        <li><a href="#">Projekt 1 – REST API mit Spring Boot</a></li>
-        <li><a href="#">Projekt 2 – SQL Optimierung</a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>Kontakt</h2>
+      <h3>REST API (Spring Boot)</h3>
       <p>
-        GitHub: <a href="#">github.com/deinname</a><br>
-        LinkedIn: <a href="#">linkedin.com/in/deinname</a>
+        Skalierbare Backend-API mit Authentifizierung und Datenbankanbindung.
+      </p>
+      <a href="#">GitHub →</a>
+    </div>
+
+    <div class="card">
+      <h3>SQL Performance Optimierung</h3>
+      <p>
+        Analyse und Optimierung komplexer Queries zur Verbesserung der Performance.
+      </p>
+      <a href="#">GitHub →</a>
+    </div>
+
+  </div>
+
+  <!-- CODE STYLE SECTION -->
+  <div class="section fade-in">
+    <h2>Ansatz</h2>
+    <div class="card">
+<pre>
+SELECT *
+FROM projects
+WHERE performance = 'high'
+AND code_quality = 'clean';
+</pre>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section fade-in">
+    <h2>Kontakt</h2>
+    <div class="card">
+      <p>
+        GitHub: <a href="https://github.com/dstrwald">github.com/dstrwald</a><br>
+        LinkedIn: <a href="#">Dein LinkedIn</a>
       </p>
     </div>
   </div>
+
+</div>
+
 </body>
 </html>
